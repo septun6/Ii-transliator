@@ -1,0 +1,196 @@
+/* ---MAIN--- */
+
+#helpInfoSection {
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 1%;
+    padding-top: 1%;
+    box-sizing: border-box;
+}
+
+#helpInfoText {
+    display: inline;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 17px;
+    font-style: italic;
+    color: rgb(54, 49, 49);
+    box-sizing: border-box;
+}
+
+#newTextBlock {
+    width: 50%;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.radioBox {
+    display: inline;
+}
+
+main:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+main { display: inline-block; }
+
+* html main { height: 1%; }
+
+main { 
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px; }
+
+#year {
+    display: inline;
+}
+
+#newTextArea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    vertical-align: top;
+    min-height: 200px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    float: left;
+    padding: 2px;
+}
+
+#copyLink {
+    display: none;
+    box-sizing: border-box;
+    padding-left: 30px;
+    font-size: 15px;
+    font-family: 'Proxima Nova', sans-serif;
+    color: rgb(0, 51, 145);
+}
+
+#copyLink:hover {
+    text-decoration: underline;
+}
+
+#newText {
+    display: inline;
+}
+
+#copyImg {
+    width: 25px;
+    height: 27px;
+    margin-top: 6px;
+    float: right;
+    cursor: pointer;
+}
+
+#lastTextBlock {
+    float: left;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+#lastText {
+    width: 100%;
+    min-height: 200px;
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    resize: none;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#lastText:hover {
+    border: 2px solid #776F6F;
+}
+
+.radioBoxGroup {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.radioBox {
+    display: inline-block;
+    float: left;
+}
+
+.radioBox input[type=radio] {
+    display: none;
+}
+.radioBox label {
+	display: inline-block;
+	cursor: pointer;
+    padding: 0px 15px;
+    padding-bottom: 2px;
+	line-height: 34px;
+    user-select: none;
+    border-bottom: 1px solid #000000;
+    border-right: none;
+}
+ 
+/* Checked */
+.radioBox input[type=radio]:checked + label {
+    border-bottom: 1px solid #1E73BE;
+    color: #1E73BE;
+}
+ 
+/* Hover */
+.radioBox label:hover {
+    color: #666;
+    border-bottom: 1px solid #666;
+}
+
+@media (max-width: 750px) {
+    #helpInfoText {
+        font-size: 14px;
+    }
+
+    #helpInfoSection {
+        padding-left: 5%;
+    }
+
+    #lastTextBlock {
+        width: 100%;
+        float: none;
+    }
+
+    #newTextBlock {
+        width: 100%;
+    }
+
+    .radioBox {
+        font-size: 16px;
+    }
+
+    .radioBox label {
+        padding: 0px 3px;
+    }
+
+    #newTextArea, #lastText {
+        min-height: 100px;
+        font-size: 17px;
+    }
+
+    #copyLink {
+        display: inline;
+    }
+
+    #copyImg {
+        display: none;
+        width: none;
+        height: none;
+    }
+}

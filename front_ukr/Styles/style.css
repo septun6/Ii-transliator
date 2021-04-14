@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: local('Proxima Nova Semibold'), local('Proxima-Nova-Semibold'),
+        url('fonts/ProximaNova-Semibold.woff2') format('woff2'),
+        url('fonts/ProximaNova-Semibold.woff') format('woff'),
+        url('fonts/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+body {
+    margin: 0px;
+}
+
+/* ----HEADER---- */
+
+header {
+    display: table;
+    min-height: 90px;
+    width: 100%;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 75px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+ul {
+    display: table-cell;
+    padding: 5px 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  li {
+    display: table-cell;
+    float: right;
+    margin-right: 5px;
+  }
+
+
+#sectionHelp a {
+    display: table-cell;
+    outline: none;
+    text-decoration: none;
+}
+
+#sectionHelp img {
+    display: table-cell;
+    
+}
+
+#systemPage {
+    display: table-cell;
+    float: right;
+    vertical-align: middle;
+    height: 25px;
+    width: 190px;
+    background-color: white;
+    color: black;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 16px;
+    border-radius: 0px;
+    text-align: center;
+    border: none;
+}
+
+#systemPage:hover {
+    background-color: #0068B1;
+    color: white;
+    border: none;
+}
+
+#systemPage:focus, #systemPage:focus-visible {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: none;
+}
+
+#sectionTitle {
+    display: table;
+    width: 100%;
+    background-color: #0283DE;
+    color: #FFFFFF;
+    text-align: center;
+}
+#left, #right {
+    display: table-cell;
+    pointer-events: none;
+}
+
+#sectionHelp {
+    display: table;
+    width: 100%;
+    min-height: 20px;
+    background-color: #0068B1;
+}
+
+#right {
+    float: right;
+}
+
+#headerText {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* ----MAIN---- */
+
+
+/* ----FOOTER---- */
+
+footer {
+    display: table;
+    min-height: 20px;
+    width: 100%;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 25px;
+    color: #FFFFFF;
+    background-color: #0283DE;
+    text-align: center;
+}
+
+#footerSection {
+    display: table;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;  
+}
+
+#footerText a:visited, #footerText a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#footerText a:hover, #footerText a:focus, #footerText a:active {
+    color: #edf0e8ef;
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    #left, #right {
+        display: none;
+    }
+
+    header {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    #sectionTitle {
+        font-size: 45px;
+    }
+
+    #footerText {
+        margin: 15px 0px;
+        font-size: 20px;
+    }
+
+    #systemPage {
+        width: 180px;
+        font-size: 15px;
+        height: 20px;
+    }
+
+    #imgBot {
+        width: 20px;
+        height: 20px;
+    }
+}

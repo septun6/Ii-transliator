@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ї-транслятор</title>
+        <link rel="stylesheet" type="text/css" href="Styles/style.css">
+        <link rel="stylesheet" type="text/css" href="Styles/styleInd.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+        <script src="Scripts/script.js" defer="defer"></script>
+        <script src="Scripts/scriptIND.js" defer="defer"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <section id="sectionHelp">
+                    <ul>
+                        
+                        <li>
+                                <select id="systemPage" onchange="changePageSystem(this)">
+                                    <option value="ky">Кирилиця</option>
+                                    <option value="ln">Латиниця (На часі)</option>
+                                    <option value="ld">Латиниця (Державна)</option>
+                                </select>
+                        </li>
+                        <li>
+                            <a href="https://t.me/Transljator_bot"><img id="imgBot" src="Pictures/Telegram.png" height="25px" width="25px"></a>
+                        </li>
+                    </ul>            
+            </section>
+            <section id="sectionTitle">
+                <img id="left" src="Pictures/sq.png" alt="sq">
+                <p id="headerText">Ї-ТРАНСЛЯТОР</p>
+                <img id="right" src="Pictures/sqr.png" alt="sq">
+            </section>
+        </header>
+
+        <main>
+            <section id="helpInfoSection">
+                <p id="helpInfoText">* Для того, щоб якась частина текста не змінювалась, треба помістити її в зірочки. Наприклад: це ***текст*** (спробуйте змінити систему письма сторінки)</p>
+            </section>
+            <section id="lastTextBlock">
+                <form id="fromSystem">
+                    <div class="radioBoxGroup">
+                        <div class="radioBox">
+                            <input id="kyF" type="radio" name="systemFrom" value="ky" checked="checked" onchange="changeFromSystem(this)">
+                            <label name="systemFromLabel" for="kyF">Кирилиця</label>
+                        </div>
+    
+                        <div class="radioBox">
+                            <input id="lnF" type="radio" name="systemFrom" value="ln" onchange="changeFromSystem(this)">
+                            <label name="systemFromLabel" for="lnF">Латиниця (На часі)</label>
+                        </div>
+                    </div>
+
+                    <textarea id="lastText" oninput="changeMessage(this)"></textarea>
+                </form>
+            </section>
+
+            <setion id="newTextBlock">
+                <form name="toSystem">
+                    <div class="radioBoxGroup">
+                        <div class="radioBox">
+                            <input id="kyT" type="radio" name="systemTo" value="ky" onchange="changeToSystem(this)">
+                            <label name="systemToLabel" for="kyT">Кирилиця</label>
+                        </div>
+    
+                        <div class="radioBox">
+                            <input id="lnT" type="radio" name="systemTo" value="ln" checked="checked" onchange="changeToSystem(this)">
+                            <label name="systemToLabel" for="lnT">Латиниця (На часі)</label>
+                        </div>
+    
+                        <div class="radioBox">
+                            <input id="ldT" type="radio" name="systemTo" value="ld" onchange="changeToSystem(this)">
+                            <label name="systemToLabel" for="ldT">Латиниця (Державна)</label>
+                        </div>
+                    </div>
+                    <img id="copyImg" src="Pictures/copy.png" height="28px" width="22px" title="Скопіювати текст" onclick="copyFunction()">
+
+                </form>
+
+                <div id="newTextArea">
+                    <p id="newText"></p>
+                </div>
+            </setion>
+            <p id="copyLink" onclick="copyFunction()">Скопіювати отриманний текст</p>
+        </main>
+
+        <footer>
+            <section in="footerSection">
+                <p id="footerText"><a id="year" href=""></a> | <a id="developer" href="https://github.com/Ne-poneL">Андрій Біленко</a></p>
+            </section>
+        </footer>
+
+        
+    </body>
+</html>
